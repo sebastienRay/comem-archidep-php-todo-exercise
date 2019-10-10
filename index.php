@@ -70,7 +70,7 @@ if (isset($_POST['action'])) {
 /**
  * Select all tasks from the database.
  */
-$selectQuery = 'SELECT * FROM todo ORDER BY created_at DESC'; // IMPLEMENT ME
+$selectQuery = ''; // IMPLEMENT ME
 $items = $db->query($selectQuery);
 ?>
 
