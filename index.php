@@ -1,9 +1,9 @@
 <?php
 
-define('BASE_URL', '/');
-define('DB_USER', 'todolist');
-define('DB_PASS', 'chAngeMeN0w!');
-define('DB_NAME', 'todolist');
+define('BASE_URL', '/comem-archidep-php-todo-exercise/');
+define('DB_USER', 'root');
+define('DB_PASS', '');
+define('DB_NAME', 'archidep');
 define('DB_HOST', '127.0.0.1');
 define('DB_PORT', '3306');
 
@@ -37,7 +37,7 @@ if (isset($_POST['action'])) {
 
       $id = $_POST['id'];
       if(is_numeric($id)) {
-        $updateQuery = ''; // IMPLEMENT ME
+        $updateQuery = 'UPDATE todo SET done=done^1 WHERE id=\''.$id.'\'';
         if(!$db->query($updateQuery)) {
           die(print_r($db->errorInfo(), true));
         }
